@@ -15,8 +15,9 @@ var db *gorm.DB
 func init() {
 	//open a db connection
 	var err error
-	db, err = gorm.Open("mysql", "root:@/misdb?charset=utf8&parseTime=True&loc=Local")
-
+	db, err = gorm.Open("mysql", "doadmin:d77gjs15qccjf34k@(dbmysql-do-user-8830210-0.b.db.ondigitalocean.com)/defaultdb?charset=utf8&parseTime=True&loc=Local")
+	//user:password@(localhost)/dbname?charset=utf8&parseTime=True&loc=Local
+	//db, err = gorm.Open("postgres", "host=http://127.0.0.1:19153 port=5432 user=postgres dbname=materialdb password=12345")
 
 	if err != nil {
 		panic("failed to connect database")
